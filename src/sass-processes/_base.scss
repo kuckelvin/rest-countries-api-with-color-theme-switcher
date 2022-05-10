@@ -1,0 +1,175 @@
+// design, in dark Mode
+
+html {
+    transition: all 0.5s ease-in;
+  }
+
+html.light {
+    color: $LightModeText;
+    $LightModeInput: $DarkGray;
+    background-color: $VeryLightGray;
+}
+
+body {
+    background-color: $DarkModeBackground;
+    color: $DarkModeText;
+    margin: 0;
+}
+
+.appContainer {
+    max-width: $DesktopWidth;
+    margin: auto;
+}
+
+.elements {
+    background-color : $DarkModeElements;
+}
+
+html.elements.light {
+    background-color: $White;
+}
+
+
+.topNav {
+    height: 60px;
+    background-color: $DarkBlue;
+
+    & .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto 5em;
+        height: 100%;
+
+        & .leftNav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .rightNav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+            & .mode {
+                margin-left: 0.5em;
+            }
+        }
+    }
+}
+
+main .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2em 5em;
+
+    // height: 100%;
+
+}
+
+.countrySearch {
+    position: relative;
+    align-self: start;
+
+    & input {
+        background-color: $DarkBlue;
+        padding: 8px;
+        border: none;
+        outline: none;
+        height: 2.5rem;
+        width: 14rem;
+        border-radius: 0.25rem;
+        color: $DarkModeText;
+        box-shadow: 0 1px 2px rgba($color: #0f0000, $alpha: 0.3);
+
+        &:focus ~ .placeholder, 
+        // &:valid ~ .placeholder,
+        // &:valid ~ svg:nth-child(3), 
+        &:focus ~ svg:nth-child(3)
+        {
+          display: none;
+        }
+    }
+
+    & .placeholder {
+        position: absolute;
+        left: 40px;
+        top: 10px;
+        background-color: $DarkBlue;
+    }
+
+}
+
+.countrySearch > svg:nth-child(3) {
+    position: absolute;
+    left: 6px;
+    top: 12px;
+    cursor: pointer;
+}
+
+
+.countryFilter {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+    
+        
+
+    & .dropDown {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: $DarkBlue;
+        height: 2.5rem;
+        margin-bottom: 4px;
+        border: none;
+        outline: none;
+        width: 10rem;
+        border-radius: 0.25rem;
+        color: $DarkModeText;
+        box-shadow: 0 1px 2px rgba($color: #0f0000, $alpha: 0.3);
+
+
+        //ADJUST WITH JS
+        &:hover ~ .dropDownContent {
+            display: block;
+        }
+
+        & .filterRegion ~ svg {
+            cursor: pointer;
+        }
+    }
+
+    & .dropDownContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        background-color: $DarkBlue;
+        border: none;
+        outline: none;
+        width: 10rem;
+        border-radius: 0.25rem;
+        color: $DarkModeText;
+        box-shadow: 0 1px 2px rgba($color: #0f0000, $alpha: 0.3);
+        display: none;
+        transition: all 0.5s ease-in-out;
+
+        & ul li {
+            margin: 8px 0;            
+
+            & a {
+            padding: 12px;
+            color: $DarkModeText;
+            text-decoration: none;
+            cursor: pointer;
+            }
+        }
+    }
+}
+
+
+
