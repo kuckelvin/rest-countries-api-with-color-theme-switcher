@@ -15,7 +15,7 @@ function CountrySearch() {
         value={text}
         onChange={(e) => setText(e.target.value)}
       />
-      <span class="placeholder">Search for a country...</span>
+      <span className="placeholder">Search for a country...</span>
       <Search />
     </form>
   );

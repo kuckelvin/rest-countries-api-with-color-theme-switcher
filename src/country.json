@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "flag": "./images/image-product-1.jpg",
+        "name": "Gambia",
+        "population": 12676478,
+        "region": "Africa",
+        "sub_region": "West Africa",
+        "currenry": "test",
+        "language": "test",
+        "top_level_domain": "test",
+        "border_countries": "test"
+    },
+    {
+        "id": 2,
+        "flag": "./images/image-product-2.jpg",
+        "name": "Zambia",
+        "population": 20098890,
+        "region": "Africa",
+        "sub_region": "East Africa",
+        "currenry": "test",
+        "language": "test",
+        "top_level_domain": "test",
+        "border_countries": "test"
+    },
+    {
+        "id": 3,
+        "flag": "./images/image-product-3.jpg",
+        "name": "Brazil",
+        "population": 40985793,
+        "region": "America",
+        "sub_region": "South America",
+        "currenry": "test",
+        "language": "test",
+        "top_level_domain": "test",
+        "border_countries": "test"
+    },
+    {
+        "id": 4,
+        "flag": "./images/image-product-4.jpg",
+        "name": "Tunisia",
+        "population": 38985869,
+        "region": "Africa",
+        "sub_region": "North Africa",
+        "currenry": "test",
+        "language": "test",
+        "top_level_domain": "test",
+        "border_countries": "test"
+    }
+]

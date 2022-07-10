@@ -1,43 +1,24 @@
-import { FaArrowDown } from "react-icons/fa";
-// import  from "../../icons/DownArrow";
+import DownArrow from "../../icons/DownArrow";
+import { useContext } from "react";
+import CountryContext from "../../context/CountryContext";
+import FilterDropDown from "./FilterDropDown";
 
 function CountryFilter() {
+  const { filterDropDown, dispatch } = useContext(CountryContext);
+
   return (
     <div className="countryFilter">
       <div className="dropDown">
         <div className="filterRegion">
           <p>Filter by Region</p>
         </div>
-        <FaArrowDown />
-      </div>
-      <div className="dropDownContent">
-        <ul>
-          <li>
-            <a href="/" rel="noreferrer">
-              Africa
-            </a>
-          </li>
-          <li>
-            <a href="/" rel="noreferrer">
-              America
-            </a>
-          </li>
-          <li>
-            <a href="/" rel="noreferrer">
-              Asia
-            </a>
-          </li>
-          <li>
-            <a href="/" rel="noreferrer">
-              Europe
-            </a>
-          </li>
-          <li>
-            <a href="/" rel="noreferrer">
-              Oceania
-            </a>
-          </li>
-        </ul>
+        <div
+          className="downArrow"
+          onClick={() => dispatch({ type: "TOGGLE_FILTER_DROPDOWN" })}
+        >
+          <DownArrow />
+          {filterDropDown ? <FilterDropDown /> : ""}
+        </div>
       </div>
     </div>
   );

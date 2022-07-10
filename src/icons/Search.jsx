@@ -1,9 +1,7 @@
-import React from "react";
-
 function Search() {
   return (
     <svg
-      classname="search"
+      className="search"
       stroke="currentColor"
       fill="hsl(0, 0%, 98%)"
       strokeWidth="0"
